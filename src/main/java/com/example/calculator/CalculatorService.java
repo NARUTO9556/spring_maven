@@ -24,6 +24,10 @@ public class CalculatorService {
     }
     public String divide(int num1, int num2) {
         int sum = num1 / num2;
-        return String.format("%s * %s = %s",num1,num2,sum);
+        if (num2 != 0) {
+            return String.format("%s / %s = %s", num1, num2, sum);
+        } else {
+            return "На ноль делить нельзя!";
+        }
     }
 }
